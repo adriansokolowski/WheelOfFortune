@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+.wrapper {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+#board {
+    margin-bottom: 10rem;
+}
+
+#category {
+    background-color: #c3c3c3;
+    padding: 1.5rem;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+#tiles {
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-gap: 0.5rem;
+    border: 0.5rem solid black;
+    place-items: start;
+    padding: 1rem;
+}
+
+.tile {
+    display: flex;
+    font-size: 3rem;
+    background-color: #c3c3c3;
+    align-items: center;
+    justify-content: center;
+    border: 0.1rem outset black;
+    border-radius: 0.5rem;
+    height: 1fr;
+    --aspect-ratio: 1/1;
+}
+
+#tiles > * {
+    width: 100%;
+}
+  
+#tiles > .tile::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 0;
+    padding-bottom: calc(100% / (var(--aspect-ratio)));
+}
+
+/* Letters section */
+
+#letters {
+    background-color: blue;
+    font-size: 3rem;
+    padding: 3rem;
+}
+
+#buttons {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-gap: 1rem;
+}
+
+button {
+    cursor: pointer;
+}
