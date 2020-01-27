@@ -45,11 +45,24 @@ html {
     --aspect-ratio: 1/1;
 }
 
+.tile-active {
+    display: flex;
+    font-size: 3rem;
+    background-color: #d3d33c;
+    align-items: center;
+    justify-content: center;
+    border: 0.1rem outset black;
+    border-radius: 0.5rem;
+    height: 1fr;
+    --aspect-ratio: 1/1;
+}
+
 #tiles > * {
     width: 100%;
 }
   
-#tiles > .tile::before {
+#tiles > .tile::before,
+ #tiles > .tile-active::before  {
     content: "";
     display: inline-block;
     width: 1px;
@@ -57,7 +70,14 @@ html {
     padding-bottom: calc(100% / (var(--aspect-ratio)));
 }
 
+
 /* Letters section */
+
+#buttons {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-gap: 1rem;
+}
 
 #letters {
     background-color: blue;
@@ -65,10 +85,28 @@ html {
     padding: 3rem;
 }
 
-#buttons {
-    display: grid;
-    grid-template-columns: repeat(18, 1fr);
-    grid-gap: 1rem;
+#buttons > * {
+    width: 100%;
+}
+
+#buttons > .letter::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 0;
+    padding-bottom: calc(100% / (var(--aspect-ratio)));
+}
+
+.letter {
+    display: flex;
+    font-size: 3rem;
+    background-color: #c3c3c3;
+    align-items: center;
+    justify-content: center;
+    border: 0.1rem outset black;
+    border-radius: 0.5rem;
+    height: 1fr;
+    --aspect-ratio: 1/1;
 }
 
 button {
