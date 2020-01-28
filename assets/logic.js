@@ -56,6 +56,13 @@ class Game {
             }
         }
         );
+
+        document.addEventListener("keydown", e => {
+            const letter = e.key; 
+            this.checkLettersInBoard(letter.toUpperCase());
+            let buttonik = document.querySelector(".letter[data-letter=" + letter.toUpperCase() + "]"); 
+            buttonik.disabled = true;
+        });
     }
 
     checkLettersInBoard(letter) {
@@ -104,17 +111,33 @@ class Game {
         return wordsArray;
     }
 
+    enableLetters() {
+        //pobieramy litery i robimy po nich pętlę włączając je
+        const letters  = this.lettersContainer.querySelectorAll(".letter");
+        letters.forEach(letter => letter.disabled = false);
+    }
+
+    disableLetters() {
+        //pobieramy litery i robimy po nich pętlę wyłączając je
+        const letters  = this.lettersContainer.querySelectorAll(".letter");
+        letters.forEach(letter => letter.disabled = true);
+    }
+
     initGame() {
-        this.getRandomClue();
         this.generateButtons();
         this.setButtonEvents();
+        this.disableLetters();
     }
 
     startGame() {
         this.attempts = 5;
+        this.enableLetters();
+        this.getRandomClue();
+        this.setButtonEvents();
     }
 }
 
 const game = new Game();
 
 game.initGame();
+game.startGame();

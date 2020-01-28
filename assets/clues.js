@@ -30,6 +30,14 @@ const clues = [
     {
         category: "Sentencja",
         clue: "Powtarzanie jest matką wiedzy"
+    },
+    {
+        category: "Tytuł",
+        clue: "Konrad Wallenrod"
+    },
+    {
+        category: "Sentencja",
+        clue: "Wiem że nic nie wiem"
     }
     
 ]; 
