@@ -128,4 +128,5 @@ button:disabled {
     background-color: #d3d33c;
     color: black;
     border: 0.5rem ridge #d0d02f;
+    cursor: default;
 }
