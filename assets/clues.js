@@ -19,6 +19,17 @@ const clues = [
         category: "Osoba",
         clue: "Margaret thatcher"
     },
-    
+    {
+        category: "Osoba",
+        clue: "Gaius Julius Caesar"
+    },
+    {
+        category: "Przysłowie",
+        clue: "Jak sobie pościelesz tak się wyśpisz"
+    },
+    {
+        category: "Sentencja",
+        clue: "Powtarzanie jest matką wiedzy"
+    }
     
 ]; 

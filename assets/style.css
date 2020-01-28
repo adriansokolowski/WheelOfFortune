@@ -7,6 +7,10 @@ html {
     font-size: 10px;
 }
 
+body {
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+}
+
 .wrapper {
     max-width: 980px;
     margin: 0 auto;
@@ -17,10 +21,17 @@ html {
 }
 
 #category {
+    display: inline-block;
+    font-weight: bold;
     background-color: #c3c3c3;
     padding: 1.5rem;
     font-size: 2.5rem;
     text-align: center;
+    border: 0.3rem outset black;
+}
+
+#clue {
+    text-transform: uppercase;
 }
 
 #tiles {
@@ -28,7 +39,7 @@ html {
     display: grid;
     grid-template-columns: repeat(15, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    grid-gap: 0.5rem;
+    grid-gap: 0.1rem;
     border: 0.5rem solid black;
     place-items: start;
     padding: 1rem;
@@ -40,7 +51,7 @@ html {
     background-color: #c3c3c3;
     align-items: center;
     justify-content: center;
-    border: 0.3rem outset black;
+    border: 0.5rem outset #8f8f8f;
     border-radius: 0.5rem;
     height: 1fr;
     --aspect-ratio: 1/1;
@@ -52,8 +63,9 @@ html {
     background-color: #d3d33c;
     align-items: center;
     justify-content: center;
-    border: 0.3rem outset black;
+    border: 0.8rem ridge #d0d02f;
     border-radius: 0.5rem;
+    font-weight: bold;
     height: 1fr;
     --aspect-ratio: 1/1;
 }
@@ -63,7 +75,7 @@ html {
 }
   
 #tiles > .tile::before,
- #tiles > .tile-active::before  {
+#tiles > .tile-active::before  {
     content: "";
     display: inline-block;
     width: 1px;
@@ -108,13 +120,12 @@ html {
     border-radius: 0.5rem;
     height: 1fr;
     --aspect-ratio: 1/1;
-}
-
-button {
+    border: 0.5rem outset #8f8f8f;
     cursor: pointer;
 }
 
 button:disabled {
     background-color: #d3d33c;
     color: black;
+    border: 0.5rem ridge #d0d02f;
 }
